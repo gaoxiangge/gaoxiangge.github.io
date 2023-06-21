@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>高翔的博客</title>
+    <link rel="stylesheet" type="text/css" href="css/gx.css">
+</head>
+<body>
+                                                                                                          0
+    <div class="top">
+        <a href="https://www.cnblogs.com/gxnb/" target="_blank">我的兴趣</a>
+        <a href="https://www.cnblogs.com/gxnb/" target="_blank">我的过去</a>
+        <a href="https://www.cnblogs.com/gxnb//" target="_blank">我的梦想</a>
+    </div>
+    <div class="content">
+    
+        <h1 class="avr">Something jast like this</h1>
+    </div>
+
+
+    <div class="yinyue">
+        <img class="music" src="../chengbao2.jpg" alt="">
+        <audio autoplay="autoplay" id="audio" loop="loop">
+            <source src="./img/Alex Goot、Madilyn Bailey - Something Just Like This (DJ版).mp3" type="audio/MP3">
+
+        </audio>
+
+    </div>
+    <div class="row">
+        <div class="centercolumn">
+            <div class="card">
+                
+
+                <h2 id="biaoti">追风筝的人</h2><br />
+                <hr />
+                
+                <h4 id="qita">2023 年 6 月 20 日</h4>
+
+                <p style="text-indent:2em">岁月静好，牵一片光阴于流年中，聆听花开的声音;携一缕馨香在生命的路口，芬芳过往。给时光一份浅浅的回眸;给心灵寻一份安暖。始终相信生命中的某些东西，深藏在心中，永远不会老去。</p>
+                <p style="text-indent:2em">回想这一生，真如东坡先生所说“事如春梦了无痕”，如果不将之记下来，未免辜负了天赋幸运。</p>
+                <p style="text-indent:2em">
+                    岁月静好，牵一片光阴于流年中，聆听花开的声音;携一缕馨香在生命的路口，芬芳过往。给时光一份浅浅的回眸;给心灵寻一份安暖。始终相信生命中的某些东西，深藏在心中，永远不会老去。
+					<br /><br />
+                </p>
+                <p style="text-indent:2em">孩子不是图画练习册,你不能随心所欲涂上你想要的颜色。
+                    当你说谎，你偷走别人知道真相的权利；当你诈骗，你偷走公平的权利。
+                    <br /> <br />              
+                   ———— 卡勒德.胡赛尼&nbsp;——《追风筝的人》
+                </p>
+                <p style="text-indent:2em">
+                    在大路另一头老人的窝棚里，老人又睡着了。他依旧脸朝下躺着，孩子坐在他身边，守着他。老人正梦见狮子。<br /><br />
+                    
+                    ————欧内斯特·海明威&nbsp;《老人与海》 译者&nbsp;吴劳
+                </p>
+                <p style="text-indent:2em">
+                   钱会把人引进恶劣的社会中去，把高尚的理想撇开，而甘心走入地狱进去。
+                    <br /><br />
+                   ———— 老舍&nbsp;《骆驼祥子》
+				   <br />
+				   <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                </p>
+            </div>  
+        </div>
+    </div>
+
+    <script>
+    let mucics = document.
+    getElementById('audio')
+    document.body.addEventListener('mousemove', function() {
+        setTimeout(() => {
+            mucics.play();
+        }, 2000);
+    }, false);
+    </script>
+    
+    <div class="footer">
+        <br />
+        <p></p><br />
+        <p>你好,我的朋友</p><br />
+    </div>
+    <script>
+        //鼠标点击出现爱心特效  这部分特效是从一个网页搬过来的  觉得挺好看的
+        (function (window, document, undefined) {
+            var hearts = [];
+            window.requestAnimationFrame = (function () {
+                return window.requestAnimationFrame ||
+				window.webkitRequestAnimationFrame ||
+				window.mozRequestAnimationFrame ||
+				window.oRequestAnimationFrame ||
+				window.msRequestAnimationFrame ||
+				function (callback) {
+				    setTimeout(callback, 1000 / 60);
+				}
+            })();
+            init();
+            function init() {
+                css(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: absolute;}.heart:after{top: -5px;}.heart:before{left: -5px;}");
+                attachEvent();
+                gameloop();
+            }
+            function gameloop() {
+                for (var i = 0; i < hearts.length; i++) {
+                    if (hearts[i].alpha <= 0) {
+                        document.body.removeChild(hearts[i].el);
+                        hearts.splice(i, 1);
+                        continue;
+                    }
+                    hearts[i].y--;
+                    hearts[i].scale += 0.004;
+                    hearts[i].alpha -= 0.013;
+                    hearts[i].el.style.cssText = "left:" + hearts[i].x + "px;top:" + hearts[i].y + "px;opacity:" + hearts[i].alpha + ";transform:scale(" + hearts[i].scale + "," + hearts[i].scale + ") rotate(45deg);background:" + hearts[i].color;
+                }
+                requestAnimationFrame(gameloop);
+            }
+            function attachEvent() {
+                var old = typeof window.onclick === "function" && window.onclick;
+                window.onclick = function (event) {
+                    old && old();
+                    createHeart(event);
+                }
+            }
+            function createHeart(event) {
+                var d = document.createElement("div");
+                d.className = "heart";
+                hearts.push({
+                    el: d,
+                    x: event.clientX - 5,
+                    y: event.clientY - 5,
+                    scale: 1,
+                    alpha: 1,
+                    color: randomColor()
+                });
+                document.body.appendChild(d);
+            }
+            function css(css) {
+                var style = document.createElement("style");
+                style.type = "text/css";
+                try {
+                    style.appendChild(document.createTextNode(css));
+                } catch (ex) {
+                    style.styleSheet.cssText = css;
+                }
+                document.getElementsByTagName('head')[0].appendChild(style);
+            }
+            function randomColor() {
+                return "rgb(" + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + ")";
+            }
+        })(window, document);
+    </script>
+</body>
+</html>
